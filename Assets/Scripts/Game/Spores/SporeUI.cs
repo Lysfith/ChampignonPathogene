@@ -2,6 +2,7 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -10,8 +11,8 @@ namespace Assets.Scripts.Game.Spores
 {
     public class SporeUI : MonoBehaviour
     {
-        [Required] [SerializeField] private Text _sporeAmountTextOnLeave;
-        [Required] [SerializeField] private Text _sporeAmountTextOnFly;
+        [Required] [SerializeField] private TextMeshProUGUI _sporeAmountTextOnLeave;
+        [Required] [SerializeField] private TextMeshProUGUI _sporeAmountTextOnFly;
 
         [Required] [SerializeField] private SporeState _sporeState;
 

@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using Assets.Scripts.Game.Leaves;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace Assets.Scripts.Game.Spores
         [Required] [SerializeField] private Image _graphic;
 
         [Required] [SerializeField] private List<GameObject> _scriptsRequired;
+
 
         private float _timeBetweenSporeGeneration = 0.5f;
         private float _lastSporeGeneration = 0;
@@ -32,6 +34,11 @@ namespace Assets.Scripts.Game.Spores
         // Update is called once per frame
         void Update()
         {
+            if (_sporeState.Leave.IsMeleze)
+            {
+                return;
+            }
+
             _lastSporeGeneration += Time.deltaTime;
 
             if(_lastSporeGeneration >= _timeBetweenSporeGeneration)
@@ -41,12 +48,10 @@ namespace Assets.Scripts.Game.Spores
                 _lastSporeGeneration = 0;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Explode();
-            }
+            
         }
 
+       
         public void Explode()
         {
             _sporeState.ChangeState();

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +13,11 @@ namespace Assets.Scripts.Game.Managers
 {
     public class SeasonManager : MonoBehaviour
     {
-        private const float YEAR_DURATION = 120;
+        private const float YEAR_DURATION = 20;
 
         [SerializeField] private float _currentTime = 0;
+        [SerializeField] private int _nbYears = 1;
+        [Required] [SerializeField] private TextMeshProUGUI _text;
         private bool _isRunning;
 
         private static SeasonManager _instance;
@@ -30,6 +33,7 @@ namespace Assets.Scripts.Game.Managers
         {
             _currentTime = 0;
             _isRunning = true;
+            _text.text = $"AN {_nbYears}";
         }
 
         public void StopLevel()
@@ -48,6 +52,8 @@ namespace Assets.Scripts.Game.Managers
 
             if(_currentTime > YEAR_DURATION)
             {
+                _nbYears++;
+                _text.text = $"AN {_nbYears}";
                 _currentTime = 0;
             }
         }

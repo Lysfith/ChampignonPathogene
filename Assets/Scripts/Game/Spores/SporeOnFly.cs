@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using Assets.Scripts.Game.Managers;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace Assets.Scripts.Game.Spores
     {
         private const int MAX_SPORE_SHOW = 20;
 
+        [Required] [SerializeField] private RectTransform _player;
         [Required] [SerializeField] private GameObject _sporePrefab;
         [Required] [SerializeField] private SporeState _sporeState;
         [Required] [SerializeField] private RectTransform _graphic;
@@ -52,6 +54,11 @@ namespace Assets.Scripts.Game.Spores
         // Update is called once per frame
         void Update()
         {
+            if (!BackgroundManager.Instance.IsPositionInWinter(_player.position))
+            {
+                return;
+            }
+
             _lastSporeDepletion += Time.deltaTime;
 
             if (_lastSporeDepletion >= _timeBetweenSporeDepletion)
@@ -61,10 +68,6 @@ namespace Assets.Scripts.Game.Spores
                 _lastSporeDepletion = 0;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Landing();
-            }
         }
 
         private void UpdateSpores(int amount)

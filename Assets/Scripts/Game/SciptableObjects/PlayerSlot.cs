@@ -14,6 +14,7 @@ namespace Assets.Scripts.Game.SciptableObjects
     {
         public int Index;
         public bool Enable;
+        public bool Alive;
         public BaseInputBind Input;
         public Color Color;
     }

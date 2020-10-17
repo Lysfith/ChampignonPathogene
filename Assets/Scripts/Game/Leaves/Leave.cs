@@ -22,6 +22,9 @@ namespace Assets.Scripts.Game.Leaves
         [Required] [SerializeField] private Gradient _gradientColor;
         [Required] [SerializeField] private Gradient _gradientShadow;
 
+        [SerializeField] private bool _isMeleze;
+
+        public bool IsMeleze => _isMeleze;
         public RectTransform Rect => _rect;
         public BoxCollider2D Collider => _collider;
 

@@ -16,6 +16,7 @@ namespace Assets.Scripts.Game.Managers
         [Required][SerializeField] private RawImage _imageSpring;
         [Required][SerializeField] private RawImage _imageWinter;
         [Required][SerializeField] private RectTransform _rectWinter;
+        [Required][SerializeField] private BoxCollider2D _colliderWinter;
 
         private static BackgroundManager _instance;
 
@@ -44,6 +45,11 @@ namespace Assets.Scripts.Game.Managers
 
             var y = 1080 - 2160 * percent;
             _rectWinter.anchoredPosition = new Vector2(0, y);
+        }
+
+        public bool IsPositionInWinter(Vector2 position)
+        {
+            return _colliderWinter.OverlapPoint(position);
         }
     }
 }

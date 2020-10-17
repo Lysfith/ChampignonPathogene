@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Common;
+using Assets.Scripts.Game.Leaves;
 using Assets.Scripts.Game.Managers;
 using Sirenix.OdinInspector;
 using System;
@@ -21,6 +22,11 @@ namespace Assets.Scripts.Game.Spores
 
         [SerializeField] private bool _isOnLeave = true;
 
+        [SerializeField] private Leave _leave;
+
+        public Leave Leave => _leave;
+
+
         public bool IsOnLeave => _isOnLeave;
 
         private RectTransform _playerFolder;
@@ -29,6 +35,7 @@ namespace Assets.Scripts.Game.Spores
         public UnityEvent OnChangeStateToLeave;
 
         public event EventHandler<int> OnNbSporeChange;
+        public event EventHandler OnDeath;
 
         private void Update()
         {
@@ -44,7 +51,27 @@ namespace Assets.Scripts.Game.Spores
         public void RemoveNbSpores(int amount)
         {
             _nbSpores -= amount;
+            if(_nbSpores < 0)
+            {
+                _nbSpores = 0;
+            }
             OnNbSporeChange?.Invoke(this, _nbSpores);
+
+            if(_nbSpores <= 0)
+            {
+                Death();
+            }
+        }
+
+        public void SetNbSpores(int amount)
+        {
+            _nbSpores = amount;
+            OnNbSporeChange?.Invoke(this, _nbSpores);
+
+            if (_nbSpores <= 0)
+            {
+                Death();
+            }
         }
 
         public void SetPlayerFolder(RectTransform folder)
@@ -56,6 +83,17 @@ namespace Assets.Scripts.Game.Spores
         {
             _color = color;
         }
+
+        public void SetLeave(Leave leave)
+        {
+            _leave = leave;
+        }
+
+        public void Death()
+        {
+            OnDeath?.Invoke(this, null);
+        }
+
 
         public bool CanChangeState()
         {
@@ -96,6 +134,7 @@ namespace Assets.Scripts.Game.Spores
                     return;
                 }
 
+                _leave = leave;
                 OnChangeStateToLeave?.Invoke();
                 _player.SetParent(leave.Rect, true);
                 _isOnLeave = true;

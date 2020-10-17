@@ -220,5 +220,10 @@ PrefabInstance:
       propertyPath: _gradientShadow.atime1
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 5427042264769412908, guid: 81c8aa337f3f8bb469c3b51e4c1add9f,
+        type: 3}
+      propertyPath: _isMeleze
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c8aa337f3f8bb469c3b51e4c1add9f, type: 3}
