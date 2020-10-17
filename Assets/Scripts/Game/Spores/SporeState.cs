@@ -14,11 +14,14 @@ namespace Assets.Scripts.Game.Spores
         [Required] [SerializeField] private RectTransform _player;
         [Required] [SerializeField] private Color _color;
 
+        [SerializeField] private float _lastStateChange;
         [SerializeField] private int _nbSpores;
         public int NbSpores => _nbSpores;
         public Color Color => _color;
 
         [SerializeField] private bool _isOnLeave = true;
+
+        public bool IsOnLeave => _isOnLeave;
 
         private RectTransform _playerFolder;
 
@@ -26,6 +29,11 @@ namespace Assets.Scripts.Game.Spores
         public UnityEvent OnChangeStateToLeave;
 
         public event EventHandler<int> OnNbSporeChange;
+
+        private void Update()
+        {
+            _lastStateChange += Time.deltaTime;
+        }
 
         public void AddNbSpores(int amount)
         {
@@ -44,8 +52,18 @@ namespace Assets.Scripts.Game.Spores
             _playerFolder = folder;
         }
 
+        public void SetPlayerColor(Color color)
+        {
+            _color = color;
+        }
+
         public bool CanChangeState()
         {
+            if(_lastStateChange < 2)
+            {
+                return false;
+            }
+
             if (_isOnLeave)
             {
                 return true;
@@ -82,6 +100,8 @@ namespace Assets.Scripts.Game.Spores
                 _player.SetParent(leave.Rect, true);
                 _isOnLeave = true;
             }
+
+            _lastStateChange = 0;
         }
     }
 }

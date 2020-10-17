@@ -10,6 +10,10 @@ namespace Assets.Scripts.Game.Spores
     public class SporeMove : MonoBehaviour
     {
         [Required][SerializeField] private RectTransform _player;
+        [Required][SerializeField] private SporeInput _input;
+        [Required] [SerializeField] private SporeState _sporeState;
+        [Required] [SerializeField] private SporeOnFly _sporeOnFly;
+        [Required] [SerializeField] private SporeOnLeave _sporeOnLeave;
 
         private float _speed = 200;
         private float _lastOffset = 0;
@@ -22,34 +26,39 @@ namespace Assets.Scripts.Game.Spores
         // Update is called once per frame
         void Update()
         {
-            float x = 0;
-            float y = 0;
+            float x = _input?.GetInputBind().GetHorizontalValue() ?? 0;
+            float y = _input?.GetInputBind().GetVerticalValue() ?? 0;
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (y < 0)
             {
-                x--;
-            }
-            else if (Input.GetKey(KeyCode.RightArrow))
-            {
-                x++;
-            }
-
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                y++;
-            }
-            else if (Input.GetKey(KeyCode.DownArrow))
-            {
-                y-=2;
+                y *= 2;
             }
 
             var offset = ScrollingManager.Instance.GetOffset();
-            var deltaOffset = offset - _lastOffset;
+            if (_sporeState.IsOnLeave)
+            {
+                if ((Mathf.Abs(x) > 0.3f || Mathf.Abs(y) > 0.3f) && _sporeState.CanChangeState())
+                {
+                    _sporeOnLeave.Explode();
+                }
+            }
+            else
+            {
+                var leave = LeavesManager.Instance.HasLeaveAtPosition(_player.position);
+                if (leave != null && _sporeState.CanChangeState())
+                {
+                    _sporeOnFly.Landing();
+                }
+                else
+                {
+                    var deltaOffset = offset - _lastOffset;
 
-            _player.anchoredPosition += new Vector2(0, deltaOffset);
+                    _player.anchoredPosition += new Vector2(0, deltaOffset);
+                    _player.anchoredPosition += new Vector2(x, y) * _speed * Time.deltaTime;
+                }
+            }
+
             _lastOffset = offset;
-
-            _player.anchoredPosition += new Vector2(x, y) * _speed * Time.deltaTime;
         }
     }
 }

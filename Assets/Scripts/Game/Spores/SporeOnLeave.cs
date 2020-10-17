@@ -15,7 +15,7 @@ namespace Assets.Scripts.Game.Spores
 
         [Required] [SerializeField] private List<GameObject> _scriptsRequired;
 
-        private float _timeBetweenSporeGeneration = 0.2f;
+        private float _timeBetweenSporeGeneration = 0.5f;
         private float _lastSporeGeneration = 0;
 
         public UnityEvent OnSporeGeneration;
@@ -47,7 +47,7 @@ namespace Assets.Scripts.Game.Spores
             }
         }
 
-        private void Explode()
+        public void Explode()
         {
             _sporeState.ChangeState();
 

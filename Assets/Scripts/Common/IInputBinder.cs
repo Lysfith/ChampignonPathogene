@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnityEngine;
 
-namespace Assets.Scripts.Game.Spores
+namespace Assets.Scripts.Common
 {
-    public class Spore : MonoBehaviour
+    public interface IInputBinder
     {
-
+        float GetVerticalValue();
+        float GetHorizontalValue();
     }
 }

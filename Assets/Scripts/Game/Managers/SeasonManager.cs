@@ -6,18 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Game.Managers
 {
-    public class ScrollingManager : MonoBehaviour
+    public class SeasonManager : MonoBehaviour
     {
-        [SerializeField] private float _speed = 10;
-        [SerializeField] private float _offset = 0;
+        private const float YEAR_DURATION = 120;
+
+        [SerializeField] private float _currentTime = 0;
         private bool _isRunning;
 
-        private static ScrollingManager _instance;
+        private static SeasonManager _instance;
 
-        public static ScrollingManager Instance => _instance;
+        public static SeasonManager Instance => _instance;
 
         void Awake()
         {
@@ -26,6 +28,7 @@ namespace Assets.Scripts.Game.Managers
 
         public void StartLevel()
         {
+            _currentTime = 0;
             _isRunning = true;
         }
 
@@ -41,12 +44,17 @@ namespace Assets.Scripts.Game.Managers
                 return;
             }
 
-            _offset += Time.deltaTime * _speed;
+            _currentTime += Time.deltaTime;
+
+            if(_currentTime > YEAR_DURATION)
+            {
+                _currentTime = 0;
+            }
         }
 
-        public float GetOffset()
+        public float GetYearPercent()
         {
-            return _offset;
+            return _currentTime / YEAR_DURATION;
         }
     }
 }

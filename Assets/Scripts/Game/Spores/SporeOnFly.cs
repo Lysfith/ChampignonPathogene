@@ -105,7 +105,7 @@ namespace Assets.Scripts.Game.Spores
 
         }
 
-        private void Landing()
+        public void Landing()
         {
             if(!_sporeState.CanChangeState())
             {

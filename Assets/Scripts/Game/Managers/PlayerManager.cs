@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Game.Leaves;
+using Assets.Scripts.Game.SciptableObjects;
 using Assets.Scripts.Game.Spores;
 using Sirenix.OdinInspector;
 using System;
@@ -13,6 +14,7 @@ namespace Assets.Scripts.Game.Managers
 {
     public class PlayerManager : MonoBehaviour
     {
+        [Required] [SerializeField] private PlayerSlotList _playerSlots;
         [Required] [SerializeField] private GameObject _playerPrefab;
         [Required] [SerializeField] private List<GameObject> _players;
         [Required] [SerializeField] private RectTransform _playerFolder;
@@ -31,15 +33,28 @@ namespace Assets.Scripts.Game.Managers
 
         public void SetPlayerStart(List<Leave> leaves)
         {
-            var leave = leaves.First();
+            for(int i = 0; i < leaves.Count; i++)
+            {
+                var slot = _playerSlots.Items.ElementAt(i);
+                if (!slot.Enable)
+                {
+                    continue;
+                }
 
-            var go = Instantiate(_playerPrefab);
-            go.transform.SetParent(leave.Rect, false);
-            go.GetComponentInChildren<SporeState>().SetPlayerFolder(_playerFolder);
+                var leave = leaves.ElementAt(i);
+                var go = Instantiate(_playerPrefab);
+                go.transform.SetParent(leave.Rect, false);
+                var state = go.GetComponentInChildren<SporeState>();
+                state.SetPlayerFolder(_playerFolder);
+                state.SetPlayerColor(slot.Color);
 
-            _players.Add(go);
+                var input = go.GetComponentInChildren<SporeInput>();
+                input.SetInputBinder(slot.Input);
 
-            go.SetActive(true);
+                _players.Add(go);
+
+                go.SetActive(true);
+            }
         }
     }
 }

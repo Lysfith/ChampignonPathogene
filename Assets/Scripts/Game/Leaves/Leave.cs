@@ -31,7 +31,7 @@ namespace Assets.Scripts.Game.Leaves
             RandomScale();
         }
 
-        public void SetColorFromPercent(float percent)
+        public void SetColorFromPercent(float percent, float percentYear)
         {
             if(percent > 1)
             {
@@ -42,29 +42,32 @@ namespace Assets.Scripts.Game.Leaves
                 percent = 0;
             }
 
-            var tranche = 0.5f / _sprites.Count;
-            if (percent > 0.5f)
+            if (_sprites.Any())
             {
-                var index = (int)((percent - 0.5f) / tranche);
-                var sprite = _sprites.ElementAt(index);
+                var tranche = 0.5f / _sprites.Count;
+                if (percent > 0.5f)
+                {
+                    var index = (int)((percent - 0.5f) / tranche);
+                    var sprite = _sprites.ElementAt(index);
 
-                _imageLeave.sprite = sprite;
-                _imageShadow.sprite = sprite;
+                    _imageLeave.sprite = sprite;
+                    _imageShadow.sprite = sprite;
+                }
+
+                _imageLeave.color = _gradientColor.Evaluate(percent);
+                _imageShadow.color = _gradientShadow.Evaluate(percent);
             }
-
-            _imageLeave.color = _gradientColor.Evaluate(percent);
-            _imageShadow.color = _gradientShadow.Evaluate(percent);
         }
 
         public void RandomRotation()
         {
             _graphic.localRotation = Quaternion.Euler(0, 0, UnityEngine.Random.Range(0, 360));
-            _shadow.position = _graphic.position + new Vector3(10, -10, 0);
+            _shadow.position = _graphic.position + new Vector3(3, -3, 0);
         }
 
         public void RandomScale()
         {
-            var scale = UnityEngine.Random.Range(2.5f, 3f);
+            var scale = UnityEngine.Random.Range(4f, 4.5f);
             _graphic.localScale = new Vector3(scale, scale, scale);
 
             _collider.size = new Vector2(_collider.size.x * scale, _collider.size.y * scale);
