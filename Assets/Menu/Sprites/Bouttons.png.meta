@@ -1,0 +1,986 @@
+fileFormatVersion: 2
+guid: 1166c83b6c0df464eacc2fe9cd915ae7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7675657364837313267
+    second: Bouttons_0
+  - first:
+      213: -4593355257396170630
+    second: Bouttons_1
+  - first:
+      213: -6597182201450753396
+    second: Bouttons_2
+  - first:
+      213: -698896770583609077
+    second: Bouttons_3
+  - first:
+      213: -6381641127455188152
+    second: Bouttons_4
+  - first:
+      213: 8657953828859843093
+    second: Bouttons_5
+  - first:
+      213: -4598360047793816192
+    second: Bouttons_6
+  - first:
+      213: 3243061684394456433
+    second: Bouttons_7
+  - first:
+      213: -5484274916824440732
+    second: Bouttons_8
+  - first:
+      213: 5653471227983079464
+    second: Bouttons_9
+  - first:
+      213: -1807125093540954021
+    second: Bouttons_10
+  - first:
+      213: 401461552224866296
+    second: Bouttons_11
+  - first:
+      213: -4305053591305877160
+    second: Bouttons_12
+  - first:
+      213: -7706788670237004232
+    second: Bouttons_13
+  - first:
+      213: -5719309159726107036
+    second: Bouttons_14
+  - first:
+      213: 757030256804346613
+    second: Bouttons_15
+  - first:
+      213: -3168312571578405015
+    second: Bouttons_16
+  - first:
+      213: -2489415499571204629
+    second: Bouttons_17
+  - first:
+      213: -1540254299345682159
+    second: Bouttons_18
+  - first:
+      213: 1240527694552407595
+    second: Bouttons_19
+  - first:
+      213: -4359134662296829670
+    second: Bouttons_20
+  - first:
+      213: -7374943475144040763
+    second: Bouttons_21
+  - first:
+      213: 6076307511463235260
+    second: Bouttons_22
+  - first:
+      213: 4636206068855356474
+    second: Bouttons_23
+  - first:
+      213: -8691747324375313008
+    second: Bouttons_24
+  - first:
+      213: 8439491496368095623
+    second: Bouttons_25
+  - first:
+      213: -2510448050454275892
+    second: Bouttons_0
+  - first:
+      213: -3139223471643639395
+    second: Bouttons_1
+  - first:
+      213: 8908544101289553290
+    second: Bouttons_2
+  - first:
+      213: 6885016163708967713
+    second: Bouttons_3
+  - first:
+      213: 4950290522988903385
+    second: Bouttons_4
+  - first:
+      213: -7139263528102703121
+    second: Bouttons_5
+  - first:
+      213: 189483335702273388
+    second: Bouttons_6
+  - first:
+      213: 8268108478654724418
+    second: Bouttons_7
+  - first:
+      213: 4380425142034628923
+    second: Bouttons_8
+  - first:
+      213: 8962751653053457398
+    second: Bouttons_9
+  - first:
+      213: 5984895062427305343
+    second: Bouttons_10
+  - first:
+      213: 6777492296183046598
+    second: Bouttons_11
+  - first:
+      213: -7962973579264844736
+    second: Bouttons_12
+  - first:
+      213: -4341245370709804315
+    second: Bouttons_13
+  - first:
+      213: -1710639597720059555
+    second: Bouttons_14
+  - first:
+      213: 2664612631737956925
+    second: Bouttons_15
+  - first:
+      213: 7463549287289184537
+    second: Bouttons_16
+  - first:
+      213: -576215032984108842
+    second: Bouttons_17
+  - first:
+      213: 2867097939520184365
+    second: Bouttons_18
+  - first:
+      213: 2494328678660067879
+    second: Bouttons_19
+  - first:
+      213: 6197991372262140866
+    second: Bouttons_20
+  - first:
+      213: -3989817169712140413
+    second: Bouttons_21
+  - first:
+      213: 477697488436774067
+    second: Bouttons_22
+  - first:
+      213: 4092423362421202545
+    second: Bouttons_23
+  - first:
+      213: 8176874812613458709
+    second: Bouttons_24
+  - first:
+      213: 5635890527327406368
+    second: Bouttons_25
+  - first:
+      213: -3993679830751325299
+    second: Bouttons_26
+  - first:
+      213: 8950529012399647459
+    second: Bouttons_27
+  - first:
+      213: -1838947682503509196
+    second: Bouttons_28
+  - first:
+      213: -473576760110851745
+    second: Bouttons_29
+  - first:
+      213: -7349141813273199427
+    second: Bouttons_30
+  - first:
+      213: 875672517297016278
+    second: Bouttons_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bouttons_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 458
+        width: 102
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8d99d8cc8192dd0800000000000000
+      internalID: -2510448050454275892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 431
+        width: 51
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91cc1682ec3f64d0800000000000000
+      internalID: -3139223471643639395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 405
+        width: 53
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8de34f19a181ab70800000000000000
+      internalID: 8908544101289553290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 377
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b12b6f8bd7c8f50800000000000000
+      internalID: 6885016163708967713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 348
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db7cbdb007f2b440800000000000000
+      internalID: 4950290522988903385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 348
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef498985ad3cec90800000000000000
+      internalID: -7139263528102703121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 325
+        width: 57
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dd363071e21a200800000000000000
+      internalID: 189483335702273388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_7
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 303
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2493c92ead83eb270800000000000000
+      internalID: 8268108478654724418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 303
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b310a2c45756acc30800000000000000
+      internalID: 4380425142034628923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 278
+        width: 42
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3eb4a4427126c70800000000000000
+      internalID: 8962751653053457398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 249
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7508f5995e9e0350800000000000000
+      internalID: 5984895062427305343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 246
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1efeda55d7e0e50800000000000000
+      internalID: 6777492296183046598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_12
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 247
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c191428b5dd7190800000000000000
+      internalID: -7962973579264844736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_13
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 248
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea7804165cc0c3c0800000000000000
+      internalID: -4341245370709804315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_14
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 248
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51cd2769569248e0800000000000000
+      internalID: -1710639597720059555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_15
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 250
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a72c2221b9af420800000000000000
+      internalID: 2664612631737956925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 226
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911ed70888ad39760800000000000000
+      internalID: 7463549287289184537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_17
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 228
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d00ebcfa7fd008f0800000000000000
+      internalID: -576215032984108842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_18
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 241
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20ea5da26af9c720800000000000000
+      internalID: 2867097939520184365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_19
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 229
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7225a9cb7b2ad9220800000000000000
+      internalID: 2494328678660067879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_20
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 227
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbee909050b30650800000000000000
+      internalID: 6197991372262140866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_21
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 229
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fad805c6251a8c0800000000000000
+      internalID: -3989817169712140413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_22
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 202
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4ce54b55f11a600800000000000000
+      internalID: 477697488436774067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_23
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 170
+        width: 51
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e10a39d553bc830800000000000000
+      internalID: 4092423362421202545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_24
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 143
+        width: 53
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bf9a2b1581a7170800000000000000
+      internalID: 8176874812613458709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_25
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 116
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029c65a0394b63e40800000000000000
+      internalID: 5635890527327406368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_26
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 78
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83dc657a599398c0800000000000000
+      internalID: -3993679830751325299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_27
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 78
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eaa8eff6baa63c70800000000000000
+      internalID: 8950529012399647459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_28
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 57
+        width: 57
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bb9df63deba76e0800000000000000
+      internalID: -1838947682503509196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_29
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 35
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5956bf12748d69f0800000000000000
+      internalID: -473576760110851745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_30
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 35
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc71ef457a920a90800000000000000
+      internalID: -7349141813273199427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouttons_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 8
+        width: 42
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd8f05d383072c00800000000000000
+      internalID: 875672517297016278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: be20c60f91fa71845840949c745b4e5c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BackgroundWinterMaterial
+  m_Name: BackgroundSpringMaterial
   m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -34,9 +34,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: fe2ebabdfeb490b47b3ad2ad4dfd6185, type: 3}
+        m_Texture: {fileID: 2800000, guid: e9787d7c0a7e7924086c91b4712e282d, type: 3}
         m_Scale: {x: 2.655, y: 1.5}
-        m_Offset: {x: 0, y: -9.619196}
+        m_Offset: {x: 0, y: -0.4249586}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -46,9 +46,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fe2ebabdfeb490b47b3ad2ad4dfd6185, type: 3}
+        m_Texture: {fileID: 2800000, guid: e9787d7c0a7e7924086c91b4712e282d, type: 3}
         m_Scale: {x: 2.655, y: 1.5}
-        m_Offset: {x: 0, y: -0.13642621}
+        m_Offset: {x: 0, y: -0.4249586}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
