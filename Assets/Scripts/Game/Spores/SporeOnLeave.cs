@@ -4,22 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Game.Spores
 {
     public class SporeOnLeave : MonoBehaviour
     {
         [Required][SerializeField] private SporeState _sporeState;
-        [SerializeField] private int _spores;
+        [Required] [SerializeField] private Image _graphic;
 
-        private float _timeBetweenSporeGeneration = 0.5f;
+        [Required] [SerializeField] private List<GameObject> _scriptsRequired;
+
+        private float _timeBetweenSporeGeneration = 0.2f;
         private float _lastSporeGeneration = 0;
 
         public UnityEvent OnSporeGeneration;
 
         private void OnEnable()
         {
-
+            _graphic.color = _sporeState.Color;
+            foreach (var script in _scriptsRequired)
+            {
+                script.SetActive(true);
+            }
         }
 
         // Update is called once per frame
@@ -29,8 +36,6 @@ namespace Assets.Scripts.Game.Spores
 
             if(_lastSporeGeneration >= _timeBetweenSporeGeneration)
             {
-                _spores++;
-
                 OnSporeGeneration?.Invoke();
 
                 _lastSporeGeneration = 0;
@@ -45,6 +50,12 @@ namespace Assets.Scripts.Game.Spores
         private void Explode()
         {
             _sporeState.ChangeState();
+
+            foreach (var script in _scriptsRequired)
+            {
+                script.SetActive(false);
+            }
+
             //foreach (var spore in spores)
             //{
             //    var pos3D = Random.onUnitSphere;
@@ -56,9 +67,9 @@ namespace Assets.Scripts.Game.Spores
             //    body.AddForce(randPosition * 10, ForceMode2D.Impulse);
             //}
 
-
-            _spores = 0;
             _lastSporeGeneration = 0;
+
+            gameObject.SetActive(false);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using Assets.Scripts.Game.Managers;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,12 @@ namespace Assets.Scripts.Game.Spores
         [Required][SerializeField] private RectTransform _player;
 
         private float _speed = 200;
+        private float _lastOffset = 0;
+
+        private void OnEnable()
+        {
+            _lastOffset = ScrollingManager.Instance.GetOffset();
+        }
 
         // Update is called once per frame
         void Update()
@@ -33,8 +40,14 @@ namespace Assets.Scripts.Game.Spores
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
-                y--;
+                y-=2;
             }
+
+            var offset = ScrollingManager.Instance.GetOffset();
+            var deltaOffset = offset - _lastOffset;
+
+            _player.anchoredPosition += new Vector2(0, deltaOffset);
+            _lastOffset = offset;
 
             _player.anchoredPosition += new Vector2(x, y) * _speed * Time.deltaTime;
         }
