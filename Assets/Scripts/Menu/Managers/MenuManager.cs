@@ -14,6 +14,7 @@ namespace Assets.Scripts.Menu.Managers
 {
     public class MenuManager : MonoBehaviour
     {
+        [Required] [SerializeField] private AudioSource _audioSource;
         [Required] [SerializeField] private CanvasGroup _mainMenu;
         [Required] [SerializeField] private CanvasGroup _reglesMenu;
         [Required] [SerializeField] private CanvasGroup _creditsMenu;
@@ -43,7 +44,12 @@ namespace Assets.Scripts.Menu.Managers
 
         public void Play()
         {
-            SceneManager.LoadScene("GameScene");
+            _mainMenu.blocksRaycasts = false;
+            _mainMenu.interactable = false;
+            _audioSource.DOFade(0, 1f).OnComplete(new TweenCallback(() =>
+            {
+                SceneManager.LoadScene("GameScene");
+            })).Play();
         }
 
         private void HideAllFrames()
@@ -52,6 +58,8 @@ namespace Assets.Scripts.Menu.Managers
             _reglesMenu.interactable = false;
             _creditsMenu.blocksRaycasts = false;
             _creditsMenu.interactable = false;
+            _mainMenu.blocksRaycasts = true;
+            _mainMenu.interactable = true;
         }
 
         public void Regles()

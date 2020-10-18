@@ -13,7 +13,7 @@ namespace Assets.Scripts.Game.Managers
 {
     public class SeasonManager : MonoBehaviour
     {
-        private const float YEAR_DURATION = 20;
+        private const float YEAR_DURATION = 30;
 
         [SerializeField] private float _currentTime = 0;
         [SerializeField] private int _nbYears = 1;
@@ -39,6 +39,11 @@ namespace Assets.Scripts.Game.Managers
         public void StopLevel()
         {
             _isRunning = false;
+        }
+
+        public int GetNbYears()
+        {
+            return _nbYears;
         }
 
         private void Update()

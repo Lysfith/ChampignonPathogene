@@ -15,16 +15,21 @@ namespace Assets.Scripts.Game.Managers
 {
     public class PlayerManager : MonoBehaviour
     {
+        [Required] [SerializeField] private AudioSource _audioSourceReproduction;
         [Required] [SerializeField] private PlayerSlotList _playerSlots;
         [Required] [SerializeField] private GameObject _playerPrefab;
         [Required] [SerializeField] private List<SporeState> _players;
         [Required] [SerializeField] private RectTransform _playerFolder;
         [Required] [SerializeField] private BoxCollider2D _borderCollider;
         [Required] [SerializeField] private GameObject _deathEffectPrefab;
+        [Required] [SerializeField] private GameObject _heartEffectPrefab;
 
         private PlayerSlot _slot1;
         private PlayerSlot _slot2;
         private bool _checkCollider;
+
+        private float _timeBetweenReproduction = 1f;
+        private float _lastReproduction = 0f;
 
         private static PlayerManager _instance;
 
@@ -44,6 +49,7 @@ namespace Assets.Scripts.Game.Managers
             _slot2.Alive = _slot2.Enable;
 
             _deathEffectPrefab.SetActive(false);
+            _heartEffectPrefab.SetActive(false);
         }
 
         private void Update()
@@ -74,6 +80,13 @@ namespace Assets.Scripts.Game.Managers
                 return;
             }
 
+            _lastReproduction += Time.deltaTime;
+
+            if(_lastReproduction < _timeBetweenReproduction)
+            {
+                return;
+            }
+
             var player1 = _players.ElementAt(0);
             var player2 = _players.ElementAt(1);
 
@@ -89,6 +102,17 @@ namespace Assets.Scripts.Game.Managers
 
                 player1.SetNbSpores(total / 2);
                 player2.SetNbSpores(total / 2);
+
+                var middle = player1.transform.position + (player2.transform.position - player1.transform.position) / 2f;
+
+                var go = Instantiate(_heartEffectPrefab);
+                go.transform.SetParent(_playerFolder, false);
+                go.transform.position = middle;
+                go.SetActive(true);
+
+                _audioSourceReproduction.Play();
+
+                _lastReproduction = 0;
             }
         }
 
@@ -118,6 +142,11 @@ namespace Assets.Scripts.Game.Managers
                     slot.Alive = false;
                     StartCoroutine(StartDeathAnimation(go.transform.position, slot.Color));
                     Destroy(go);
+
+                    if(!_slot1.Alive && ! _slot2.Alive)
+                    {
+                        LevelManager.Instance.StopLevel();
+                    }
                 };
 
                 var input = go.GetComponentInChildren<SporeInput>();
