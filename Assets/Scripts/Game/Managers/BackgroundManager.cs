@@ -31,7 +31,7 @@ namespace Assets.Scripts.Game.Managers
         {
             var offset = ScrollingManager.Instance.GetOffset();
 
-            var amount = offset / 1300f;
+            var amount = offset / 1000f;
 
             _imageSpring.material.SetTextureOffset("_BaseMap", new Vector2(0, -amount));
             _imageWinter.material.SetTextureOffset("_BaseMap", new Vector2(0, -amount));
@@ -43,7 +43,7 @@ namespace Assets.Scripts.Game.Managers
         {
             var percent = SeasonManager.Instance.GetYearPercent();
 
-            var y = 1080 - 2160 * percent;
+            var y = 720 - 1440 * percent;
             _rectWinter.anchoredPosition = new Vector2(0, y);
         }
 

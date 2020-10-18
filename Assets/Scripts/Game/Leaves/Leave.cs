@@ -23,8 +23,10 @@ namespace Assets.Scripts.Game.Leaves
         [Required] [SerializeField] private Gradient _gradientShadow;
 
         [SerializeField] private bool _isMeleze;
+        [SerializeField] private float _state;
 
         public bool IsMeleze => _isMeleze;
+        public float State => _state;
         public RectTransform Rect => _rect;
         public BoxCollider2D Collider => _collider;
 
@@ -44,6 +46,8 @@ namespace Assets.Scripts.Game.Leaves
             {
                 percent = 0;
             }
+
+            _state = percent;
 
             if (_sprites.Any())
             {
@@ -70,7 +74,7 @@ namespace Assets.Scripts.Game.Leaves
 
         public void RandomScale()
         {
-            var scale = UnityEngine.Random.Range(4f, 4.5f);
+            var scale = UnityEngine.Random.Range(3.25f, 3.75f);
             _graphic.localScale = new Vector3(scale, scale, scale);
 
             _collider.size = new Vector2(_collider.size.x * scale, _collider.size.y * scale);

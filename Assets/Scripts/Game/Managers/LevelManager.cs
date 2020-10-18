@@ -67,7 +67,7 @@ namespace Assets.Scripts.Game.Managers
             _audioSourceWinter.volume = curveValue;
         }
 
-        public void StopLevel()
+        public void StopLevel(string player)
         {
             _audioSourceSummer.DOFade(0f, 1f).OnComplete(new TweenCallback(() =>
             {
@@ -82,7 +82,14 @@ namespace Assets.Scripts.Game.Managers
             ScrollingManager.Instance.StopLevel();
             SeasonManager.Instance.StopLevel();
 
-            _endText.text = $"Vous avez survecu a {SeasonManager.Instance.GetNbYears()-1} hiver(s)";
+            var str = $"Vous avez survecu a {SeasonManager.Instance.GetNbYears()-1} hiver(s)";
+
+            if(player != null)
+            {
+                str += $"\nLe joueur {player} gagne !";
+            }
+
+            _endText.text = str;
 
             _yearText.DOFade(0, 1f).OnComplete(new TweenCallback(() =>
             {

@@ -34,7 +34,7 @@ namespace Assets.Scripts.Game.Spores
         // Update is called once per frame
         void Update()
         {
-            if (_sporeState.Leave.IsMeleze)
+            if (_sporeState.Leave.IsMeleze || _sporeState.Leave.State > 0.6f)
             {
                 return;
             }

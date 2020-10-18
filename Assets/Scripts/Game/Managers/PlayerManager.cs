@@ -33,7 +33,7 @@ namespace Assets.Scripts.Game.Managers
         private float _timeBetweenReproduction = 1f;
         private float _lastReproduction = 0f;
 
-        private float _timeBetweenCompetition = 0.5f;
+        private float _timeBetweenCompetition = 0.2f;
         private float _lastCompetition = 0f;
 
         private static PlayerManager _instance;
@@ -149,13 +149,13 @@ namespace Assets.Scripts.Game.Managers
                 }
 
                 var deltaY = player2.transform.position.y - player1.transform.position.y;
-
-                if(Mathf.Abs(deltaY) < 10f)
+                
+                if(Mathf.Abs(deltaY) < 40f)
                 {
                     return;
                 }
-
-                if(player2.transform.position.y > player1.transform.position.y)
+                Debug.Log(deltaY);
+                if (player2.transform.position.y > player1.transform.position.y)
                 {
                     player1.RemoveNbSpores(1);
                 }
@@ -204,9 +204,14 @@ namespace Assets.Scripts.Game.Managers
                     StartCoroutine(StartDeathAnimation(go.transform.position, slot.Color));
                     Destroy(go);
 
-                    if(!_slot1.Alive && ! _slot2.Alive)
+                    if(!_slot2.Enable && !_slot1.Alive)
                     {
-                        LevelManager.Instance.StopLevel();
+                        LevelManager.Instance.StopLevel(null);
+                    }
+
+                    if (_slot2.Enable && (!_slot1.Alive || !_slot2.Alive))
+                    {
+                        LevelManager.Instance.StopLevel(_slot1.Alive ? "1" : "2");
                     }
                 };
 

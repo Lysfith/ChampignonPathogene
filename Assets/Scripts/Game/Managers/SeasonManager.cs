@@ -13,12 +13,15 @@ namespace Assets.Scripts.Game.Managers
 {
     public class SeasonManager : MonoBehaviour
     {
-        private const float YEAR_DURATION = 30;
+        private const float YEAR_DURATION = 80;
 
         [SerializeField] private float _currentTime = 0;
         [SerializeField] private int _nbYears = 1;
         [Required] [SerializeField] private TextMeshProUGUI _text;
         private bool _isRunning;
+        private bool _isPausing;
+        private bool _needWinterPause;
+        private float _winterDuration;
 
         private static SeasonManager _instance;
 
@@ -34,6 +37,8 @@ namespace Assets.Scripts.Game.Managers
             _currentTime = 0;
             _isRunning = true;
             _text.text = $"AN {_nbYears}";
+            _needWinterPause = true;
+            _winterDuration = 0;
         }
 
         public void StopLevel()
@@ -48,19 +53,40 @@ namespace Assets.Scripts.Game.Managers
 
         private void Update()
         {
-            if (!_isRunning)
+            if (!_isRunning || _isPausing)
             {
                 return;
             }
 
             _currentTime += Time.deltaTime;
+           
+            if(GetYearPercent() >= 0.5f && _needWinterPause)
+            {
+                _currentTime = YEAR_DURATION / 2f;
+                Debug.Log("Pause Winter");
+                StartCoroutine(PauseWinter());
+                _needWinterPause = false;
+            }
 
             if(_currentTime > YEAR_DURATION)
             {
                 _nbYears++;
                 _text.text = $"AN {_nbYears}";
                 _currentTime = 0;
+                _needWinterPause = true;
+                _winterDuration += 10;
             }
+        }
+
+        private IEnumerator PauseWinter()
+        {
+            _isPausing = true;
+
+            yield return new WaitForSeconds(_winterDuration);
+
+            _isPausing = false;
+
+            Debug.Log("Fin Pause Winter");
         }
 
         public float GetYearPercent()

@@ -15,12 +15,12 @@ namespace Assets.Scripts.Game.Managers
     {
         private const int MIN_LEAVES_ON_LINE = 3;
         private const int MAX_LEAVES_ON_LINE = 4;
-        private const int SCREEN_MARGE = 100;
+        private const int SCREEN_MARGE = 50;
         private const int SCREEN_LINE_OFFSET = 600;
-        private const int SCREEN_LINE_START = -700;
-        private const int SCREEN_LINE_MIDDLE = -700;
-        private const int SCREEN_WIDTH = 1920;
-        private const int SCREEN_HEIGHT = 1080;
+        private const int SCREEN_LINE_START = -500;
+        private const int SCREEN_LINE_MIDDLE = -500;
+        private const int SCREEN_WIDTH = 1280;
+        private const int SCREEN_HEIGHT = 720;
 
         [SerializeField] private List<Leave> _leaves;
         [Required][SerializeField] private GameObject _leafPrefab;
