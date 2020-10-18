@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 0
   Enable: 1
-  Alive: 1
+  Alive: 0
   Input: {fileID: 11400000, guid: 66266c7d4faf3b243b92bae0d910a06f, type: 2}
   Color: {r: 0, g: 0.8793677, b: 0.8962264, a: 1}

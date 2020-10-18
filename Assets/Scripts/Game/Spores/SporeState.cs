@@ -46,6 +46,8 @@ namespace Assets.Scripts.Game.Spores
         {
             _nbSpores += amount;
             OnNbSporeChange?.Invoke(this, _nbSpores);
+
+            FloatingTextManager.Instance.NewText(amount.ToString(), _player.transform.position, Color.green);
         }
 
         public void RemoveNbSpores(int amount)
@@ -57,7 +59,9 @@ namespace Assets.Scripts.Game.Spores
             }
             OnNbSporeChange?.Invoke(this, _nbSpores);
 
-            if(_nbSpores <= 0)
+            FloatingTextManager.Instance.NewText($"-{amount}", _player.transform.position, Color.red);
+
+            if (_nbSpores <= 0)
             {
                 Death();
             }
@@ -65,8 +69,12 @@ namespace Assets.Scripts.Game.Spores
 
         public void SetNbSpores(int amount)
         {
+            var delta = amount - _nbSpores;
+
             _nbSpores = amount;
             OnNbSporeChange?.Invoke(this, _nbSpores);
+
+            FloatingTextManager.Instance.NewText($"{delta}", _player.transform.position, Color.black);
 
             if (_nbSpores <= 0)
             {
